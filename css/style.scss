@@ -101,7 +101,7 @@ button:hover{
     top: 100%;
     width: 100%;
     height: 100%;
-    transition: 0.2s;
+    transition: 0.3s;
     background-repeat: no-repeat;
     background-position: bottom;
 }
@@ -115,3 +115,58 @@ button:hover{
     top: -40px;
 }
 
+
+@media screen and (max-width: 992px){
+
+    .wrapper{
+        border: 1px solid black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: url(Baida-palermo.jpeg);
+        overflow: hidden;
+    
+    }
+    .game{
+    //border: 2px solid red;
+    width: 300px;
+    height: 250px;
+    margin: 300px auto;
+    z-index: 200;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.hole:after{
+    content: "";
+    display: block;
+    //border: 1px solid red;
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    z-index: 2;
+    bottom: -60%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(car.png);
+    
+    
+}
+.mole{
+    background-image: url(vice.png);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.hole.up .mole{  //questa  classe si applica ai figli .mole di chi ha le classi .hole e .up 
+    top: -15px;
+}
+}
