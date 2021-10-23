@@ -59,7 +59,22 @@ function startGame(){
         if (countdown < 0){
             countdown = 0;
             clearInterval(startCountdown);
-            countdownBoard.textContent = "Quanti vicè annagghiaisti sango'?"
+            countdownBoard.textContent = "Ne hai presi"
         }
     }, 1000);
 }
+startButton.addEventListener('click',startGame);
+
+
+//on click element
+function whack(e){
+    score++;
+    this.style.backgroundImage = 'url("js/vice1.png")';
+    this.style.pointerEvents = 'none'
+    setTimeout(() => {
+     this.style.backgroundImage = 'url("js/vice.png")'
+     this.style.pointerEvents = 'all';
+    }, 1200);
+    scoreBoard.textContent = score;
+}
+moles.forEach(mole => mole.addEventListener('click', whack));
