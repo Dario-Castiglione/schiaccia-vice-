@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica';
+  z-index: 1;
+}
+
+.wrapper {
+  border: 1px solid black;
+  width: 1000px;
+  height: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(Baida-palermo.jpeg);
+  overflow: hidden;
+}
+
+.score {
+  font-size: 150px;
+  color: #000;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 200px;
+  height: 100px;
+  text-align: center;
+}
+
+.countdown {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+}
+
+button {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background: #000;
+  color: #fff;
+  padding: 20px 50px;
+  border-radius: 5px;
+  z-index: 200;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border: 2px solid #000;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.game {
+  width: 700px;
+  height: 450px;
+  margin: 300px auto;
+  z-index: 200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.hole {
+  width: 33.33%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hole:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  z-index: 2;
+  bottom: -27%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(car.png);
+}
+
+.mole {
+  background-image: url(vice.png);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.mole.small {
+  background-size: 60%;
+}
+
+.mole.large {
+  background-size: 80%;
+}
+
+.hole.up .mole {
+  top: -40px;
+}
+/*# sourceMappingURL=style.css.map */
