@@ -22,7 +22,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(Baida-palermo.jpeg);
+  background-image: url(./Baida-palermo.jpeg);
   overflow: hidden;
 }
 
